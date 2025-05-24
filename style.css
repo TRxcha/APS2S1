@@ -54,16 +54,18 @@ footer{
 }
 
 .nav-itens{
+    color: var(--cor-primaria);
+    text-decoration: none;
     margin-inline: 5%;
     min-inline-size: 1%;
     cursor: pointer;
-    transition: transform 0.1s ease;
-    text-decoration: none;
-    color: white;
+    color: var(--cor-primaria);
+    transition: transform 0.3s, color 0.3s;
 }
 
 .nav-itens:hover{
     transform: scale(1.4);
+    animation: arcoIrist 2s linear infinite;
 }
 
 .text{
@@ -139,9 +141,29 @@ footer{
     cursor: pointer;
     background-color: black;
     color: white;   
+    animation: arcoIris 5s linear infinite;
 }
 
 .img-tenis1{
     width: 100%;
     border-radius: 50px;
+}
+
+@keyframes arcoIris {
+    0% { border-color: red; }
+    16% { border-color: orange; }
+    32% { border-color: yellow; }
+    48% { border-color: green; }
+    64% { border-color: blue; }
+    80% { border-color: indigo; }
+    100% { border-color: violet; }
+}
+@keyframes arcoIrist {
+    0% { color: red; }
+    16% { color: orange; }
+    32% { color: yellow; }
+    48% { color: green; }
+    64% { color: blue; }
+    80% { color: indigo; }
+    100% { color: violet; }
 }
